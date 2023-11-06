@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, noarchive, nofollow" />
+    <title>Family Football Pick'em</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="
+    apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <header>
+        <h1 class="head">
+            <div class="head one">
+                <img src="android-chrome-192x192.png" alt="Orange and blue football on white background with line drawing around edges" width="192" 
+                height="192" />    
+                Family Football Pick'em
+            </div>
+            <div class="head two">
+                <nav class="head prof login">
+                    <a href="profile.html">Profile</a>
+                    <!-- <a href="login.html">Login</a> -->
+                </nav>
+            </div>
+
+            <div class="head three">
+                <button class="open-button logButton"  onclick="openLogin()">Login</button>
+            </div>
+        </h1>
+
+        <!-- <div>
+            <button class="open-button headLogin"  onclick="openLogin()">Login</button>
+        </div> -->
+
+    </header>
+    <nav class="global">
+        <a href="index.html">Home</a>
+        <a href="league.html">League Page</a>
+        <a href="curWeek.html">Current Week</a>
+        <a href="upcomingWeek.html">Upcoming Week</a>
+        <a href="prevWeek.html">Previous Week</a>
+    </nav>
+    <main>
+        <h2>Pick a Winnner...</h2>
+        <nav class="local">
+
+        </nav>
+        <section>
+            <article id="beforeSunday">
+                <h3>These games are played <strong>this week</strong>.</h3>
+                    <p>Click on the away or home circle to make your selection.  Only one team can selected.</p>
+                <form method="post">
+                    <table>
+                        <tr>
+                            <td>Game Date</td>
+                            <td>Start Time</td>
+                            <td>Team</td>
+                            <td>Away</td>
+                            <td>Home</td>
+                            <td>Team</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>17:25 PST</td>
+                            <td>Vikings</td>
+                            <td><input type="radio" name="thursday" id="taway" value="Away"></td>
+                            <td><input type="radio" name="thursday" id="thome" value="Home"></td>
+                            <td>Eagles</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>10:00 PST</td>
+                            <td>Packers</td>
+                            <td><input type="radio" name="s1" id="s1away" value="Away"></td>
+                            <td><input type="radio" name="s1" id="s1home" value="Home"></td>
+                            <td>Falcons</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>10:00 PST</td>
+                            <td>Raiders</td>
+                            <td><input type="radio" name="s2" id="s2away" value="Away"></td>
+                            <td><input type="radio" name="s2" id="s2home" value="Home"></td>
+                            <td>Bills</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>10:00 PST</td>
+                            <td>Ravens</td>
+                            <td><input type="radio" name="s3" id="s3away" value="Away"></td>
+                            <td><input type="radio" name="s3" id="s3home" value="Home"></td>
+                            <td>Bengals</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>10:00 PST</td>
+                            <td>Seahawks</td>
+                            <td><input type="radio" name="s4" id="s4away" value="Away"></td>
+                            <td><input type="radio" name="s4" id="s4home" value="Home"></td>
+                            <td>Lions</td>
+                        </tr>
+                    </table>
+                    <p>When selections are complete click the submit button.  You can resubmit as often as you like until 1 minute prior to scheduled kickoff.</p>
+                    <button class="pickSel">Submit</button>
+                </form>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>
+           &copy; 2023 Brad Tyler 
+        </p>
+    </footer>
+</body>
+</html>
+
+                <!-- The form -->
+                <div class="form-popup" id="login">
+                    <form class="form-container">
+                        <h1>Login</h1>
+    
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" autofocus="true" required>
+    
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+    
+                        <button type="submit" class="btn">Login</button>
+                        <button type="button" class="btn cancel" onclick="closeLogin()">Cancel</button>
+                    </form>
+                    </div>
+    
+                    <script>
+                        function openLogin() {
+                            document.getElementById("login").style.display = "block";
+                          }
+                          
+                          function closeLogin() {
+                            document.getElementById("login").style.display = "none";
+                          }
+                        </script>

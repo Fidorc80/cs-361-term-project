@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, noarchive, nofollow" />
+    <title>Family Football Pick'em</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="
+    apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <header>
+        <h1 class="head">
+            <div class="head one">
+                <img src="android-chrome-192x192.png" alt="Orange and blue football on white background with line drawing around edges" width="192" 
+                height="192" />    
+                Family Football Pick'em
+            </div>
+            <div class="head two">
+                <nav class="head prof login">
+                    <a href="profile.html">Profile</a>
+                    <!-- <a href="login.html">Login</a> -->
+                </nav>
+            </div>
+
+            <div class="head three">
+                <button class="open-button logButton"  onclick="openLogin()">Login</button>
+            </div>
+        </h1>
+
+        <!-- <div>
+            <button class="open-button headLogin"  onclick="openLogin()">Login</button>
+        </div> -->
+
+    </header>
+    <nav class="global">
+        <a href="index.html">Home</a>
+        <a href="league.html">League Page</a>
+        <a href="curWeek.html">Current Week</a>
+        <a href="upcomingWeek.html">Upcoming Week</a>
+        <a href="prevWeek.html">Previous Week</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Profile</h2>
+            <nav class="local">
+
+            </nav>
+            <!-- <form method="get"></form> -->
+                <ol>
+                    <li>Username: Hampton</li>
+                    <li>Team Name: GoodPicker101</li>
+                    <li>Email: GdPck101@winner.com</li>
+                    <li>Password: .........<button class="open-button" onclick="openChange()">Change Password</button></li>
+                    <li>League Standing: # 1.</li>
+                </ol>
+                <button class="open-button" onclick="openProfile()">Edit Profile</button>
+        </section>
+    </main>
+    <footer>
+        <p>
+           &copy; 2023 Brad Tyler 
+        </p>
+    </footer>
+</body>
+</html>
+
+    <!-- A button to open the popup form -->
+
+
+    <!-- The form -->
+    <div class="form-popup" id="change">
+        <form class="form-container">
+            <h1>Change Password</h1>
+
+            <label for="userName"><b>Username</b></label>
+            <input type="text" placeholder="AllIdoIsWin" name="userName" autofocus="true" required>
+
+            <label for="psw"><b>Current Password</b></label>
+            <input type="password" placeholder="Enter Current Password" name="psw" required>
+
+            <label for="newPsw"><b>New Password</b></label>
+            <input type="password" placeholder="Enter New Password" name="newPsw" required>
+
+            <label for="confirmNewPsw"><b>Re-enter New Password</b></label>
+            <input type="password" placeholder="Re-enter New Password" name="confirmNewPsw" required>
+
+            <button type="submit" class="btn">Change Password</button>
+            <button type="button" class="btn cancel" onclick="closeChange()">Cancel</button>
+        </form>
+        </div>
+
+        <script>
+            function openChange() {
+                document.getElementById("change").style.display = "block";
+                }
+                
+                function closeChange() {
+                document.getElementById("change").style.display = "none";
+                }
+            </script>
+
+        <!-- A button to open the popup form -->
+
+
+    <!-- The form -->
+    <div class="form-popup" id="profile">
+        <form class="form-container">
+            <h1>Edit Profile</h1>
+
+            <label for="teamName"><b>Change Team Name</b></label>
+            <input type="text" placeholder="Beavers Rule" name="teamName" autofocus="true" required>
+
+            <label for="pEmail"><b>Update Email</b></label>
+            <input type="text" placeholder="Enter Email" name="pEmail" required>
+
+            <button type="submit" class="btn">Change Profile</button>
+            <button type="button" class="btn cancel" onclick="closeProfile()">Cancel</button>
+        </form>
+        </div>
+
+        <script>
+            function openProfile() {
+                document.getElementById("profile").style.display = "block";
+                }
+                
+                function closeProfile() {
+                document.getElementById("profile").style.display = "none";
+                }
+            </script>
+
+                            <!-- The form -->
+                            <div class="form-popup" id="login">
+                                <form class="form-container">
+                                    <h1>Login</h1>
+                
+                                    <label for="email"><b>Email</b></label>
+                                    <input type="text" placeholder="Enter Email" name="email" autofocus="true" required>
+                
+                                    <label for="psw"><b>Password</b></label>
+                                    <input type="password" placeholder="Enter Password" name="psw" required>
+                
+                                    <button type="submit" class="btn">Login</button>
+                                    <button type="button" class="btn cancel" onclick="closeLogin()">Cancel</button>
+                                </form>
+                                </div>
+                
+                                <script>
+                                    function openLogin() {
+                                        document.getElementById("login").style.display = "block";
+                                      }
+                                      
+                                      function closeLogin() {
+                                        document.getElementById("login").style.display = "none";
+                                      }
+                                    </script>

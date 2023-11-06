@@ -2,7 +2,7 @@
 #
 #   Hello World server in Python
 #   Binds REP socket to tcp://*:5555
-#   Expects b"Hello" from client, replies with b"World"
+#   Expects b"A message from CS361" from client, replies with b"A message from CS361"
 #
 
 import time
@@ -21,4 +21,4 @@ while True:
     time.sleep(1)
 
     #  Send reply back to client
-    socket.send(b"World")
+    socket.send(b"A message from CS361")
