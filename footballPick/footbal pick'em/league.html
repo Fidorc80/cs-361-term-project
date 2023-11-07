@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, noarchive, nofollow" />
+    <title>Family Football Pick'em</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="
+    apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <header>
+        <h1 class="head">
+            <div class="head one">
+                <img src="android-chrome-192x192.png" alt="Orange and blue football on white background with line drawing around edges" width="192" 
+                height="192" />    
+                Family Football Pick'em
+            </div>
+            <div class="head two">
+                <nav class="head prof login">
+                    <a href="profile.html">Profile</a>
+                    <!-- <a href="login.html">Login</a> -->
+                </nav>
+            </div>
+
+            <div class="head three">
+                <button class="open-button logButton"  onclick="openLogin()">Login</button>
+            </div>
+        </h1>
+
+        <!-- <div>
+            <button class="open-button headLogin"  onclick="openLogin()">Login</button>
+        </div> -->
+
+    </header>
+    <nav class="global">
+        <a href="index.html">Home</a>
+        <a href="league.html">League Page</a>
+        <a href="curWeek.html">Current Week</a>
+        <a href="upcomingWeek.html">Upcoming Week</a>
+        <a href="prevWeek.html">Previous Week</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Hail to the Victors!</h2>
+            <nav class="local">
+
+            </nav>
+            <article id="standings">
+                <h3>League Standings</h3>
+                <p>
+                    The leaderboard after Week 1:
+                </p>
+                <table>
+                    <tr>
+                        <td>Team Name</td>
+                        <td>Standings</td>
+                        <td>Total Wins</td>
+                        <td>Total Losses</td>
+                        <td>Previous Week Standings</td>
+                    </tr>
+                    <tr>
+                        <td>Hampton</td>
+                        <td>1</td>
+                        <td>10</td>
+                        <td>6</td>
+                        <td>No Standings</td>
+                    </tr>
+                    <tr>
+                        <td>Crosby</td>
+                        <td>2</td>
+                        <td>9</td>
+                        <td>7</td>
+                        <td>No Standings</td>
+                    </tr>
+                    <tr>
+                        <td>Chesney</td>
+                        <td>3</td>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>No Standings</td>
+                    </tr>
+                    <tr>
+                        <td>Wylie</td>
+                        <td>4</td>
+                        <td>7</td>
+                        <td>9</td>
+                        <td>No Standings</td>
+                    </tr>
+                    <tr>
+                        <td>Sakira</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>10</td>
+                        <td>No Standings</td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>
+           &copy; 2023 Brad Tyler 
+        </p>
+    </footer>
+</body>
+</html>
+
+                <!-- The form -->
+                <div class="form-popup" id="login">
+                    <form class="form-container">
+                        <h1>Login</h1>
+    
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" autofocus="true" required>
+    
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+    
+                        <button type="submit" class="btn">Login</button>
+                        <button type="button" class="btn cancel" onclick="closeLogin()">Cancel</button>
+                    </form>
+                    </div>
+    
+                    <script>
+                        function openLogin() {
+                            document.getElementById("login").style.display = "block";
+                          }
+                          
+                          function closeLogin() {
+                            document.getElementById("login").style.display = "none";
+                          }
+                        </script>
