@@ -1,0 +1,102 @@
+/**
+ * Microservice README
+ * 
+ * This microservice provides user registration, login, logout, and status check functionality.
+ * It uses Express.js as the web framework, MongoDB as the database, and JWT for authentication.
+ * 
+ * Communication Paths:
+ * - POST /register: Register a new user with a username and password.
+ * - POST /login: Authenticate a user with a username and password and return a JWT token.
+ * - GET /logout: Log out the currently authenticated user and destroy the session.
+ * - GET /status: Check the status of the user's authentication by verifying the JWT token.
+ * 
+ * Required NPM Packages:
+ * - express: Web framework for handling HTTP requests and responses.
+ * - express-session: Middleware for managing user sessions.
+ * - passport: Authentication middleware for handling user authentication.
+ * - bcrypt: Library for hashing passwords.
+ * - jsonwebtoken: Library for generating and verifying JWT tokens.
+ * - passport-local: Passport strategy for authenticating with a username and password.
+ * - mongoose: MongoDB object modeling tool for Node.js.
+ * - cors: Middleware for enabling Cross-Origin Resource Sharing.
+ * - dotenv: Library for loading environment variables from a .env file.
+ * 
+ * MongoDB Configuration:
+ * - The microservice connects to a MongoDB Atlas cluster using the provided connection string.
+ * - The user schema is defined with a username and password field.
+ * - Additional fields can be added to the user schema as needed.
+ * 
+ * Note: Make sure to set the necessary environment variables in a .env file for local development.
+ * 
+ * To start the microservice, run the following command:
+ * ```
+ * npm run devStart
+ * ```
+ * The microservice will start listening on http://localhost:3001.
+ * 
+ * ACCESS_TOKEN_SECRET, SESSION_SECRET, and MONGODB_CONNECT_STRING need to be in the .env file 
+ ***SAMPLE CALL FOR LOGIN***
+ * app.post('/userLogin', async (req, res) => {
+    try {
+        const formData = req.body;
+        const response = await fetch('http://localhost:3001/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData),
+        });
+
+        if (response.status === 200) {
+            const data = await response.json();
+            if (data.token) {
+                // Store the token in a cookie or local storage for future requests
+                res.cookie('token', data.token); // For example, using cookies
+
+                // Redirect to profile on successful login
+                res.redirect('./profile.html');
+            } else {
+                throw new Error('Token not received');
+            }
+        } else {
+            throw new Error('Login failed');
+        }
+    } catch (error) {
+        console.error('Error during login:', error);
+        res.status(500).send('Error during login');
+    }
+});
+
+
+***SAMPLE CALL FOR VERIFICATION**
+
+async function handleAuthState() {
+    try {
+        const cookies = document.cookie.split(';');
+        let token = null;
+
+        cookies.forEach(cookie => {
+            const [name, value] = cookie.trim().split('=');
+            if (name === 'token') {
+                token = value;
+            }
+        });
+        const response = await fetch('http://localhost:3001/status', {
+                // Retrieve the token
+            headers: {
+                Authorization: `Bearer ${token}`,
+
+            }
+        }); // Fetch authentication status
+        if (response.status === 200) {
+            const data = await response.json(); // Parse the response to JSON
+            const toggleLoginButton = document.getElementById('toggleLoginButton');
+            const normalLoginButton = document.getElementById('loginButton');
+
+            // Update UI based on authentication status (data.loggedIn)
+            if (data.loggedIn) {
+                toggleLoginButton.innerText = 'Logout';
+                toggleLoginButton.onclick = async () => {
+                    // Perform logout logic
+                    await logout();}}}}}
+
