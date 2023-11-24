@@ -9,3 +9,7 @@ unUsedCode/models/register.Model.js
 unUsedCode/views/index.ejs
 unUsedCode/views/login.ejs
 unUsedCode/views/register.ejs
+.DS_Store
+footballPick/.DS_Store
+login/.DS_Store
+unUsedCode/.DS_Store
